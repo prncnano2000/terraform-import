@@ -6,31 +6,34 @@
 
 # TERRAFORM-IMPORT
 
-Terraform peut importer l'infrastructure existante. Cela vous permet de récupérer les ressources que vous avez créées par d'autres moyens et de les gérer sous Terraform.
-La fonction `terraform import` permet d'intégrer des ressources existantes, créées en dehors de Terraform, dans votre infrastructure Terraform.
+Terraform can import existing infrastructure. This allows you to take resources you've created in other ways and manage them in Terraform.
+The `terraform import` function allows you to integrate existing resources, created outside of Terraform, into your Terraform infrastructure.
+
 ## Technologies
 
 **Terraform :** `terraform import`
 
-dans notre cas dans le **Cloud AWS** la ressources a importer est une instance `EC2` mais vous pouvez utiliser d'autres ressources.
+in our case in the **AWS Cloud** the resource to import is an `EC2` instance but you can use other resources.
+
 ## Features
 
-- Importez des ressources cloud ou d'autres ressources déjà créées dans votre infrastructure Terraform.
+- Import cloud resources or other resources already created into your Terraform infrastructure.
 
-- Gérez et provisionnez ces ressources de manière centralisée avec Terraform.
+- Manage and provision these resources centrally with Terraform.
 
-- Éliminez la nécessité de gérer séparément les ressources créées manuellement ou avec d'autres outils.
+- Eliminate the need to separately manage resources created manually or with other tools.
+
+
 ## Prerequisites
 
 
-- **AWS EC2 :** Avoir une EC2 lancé qui va nous servir d'infrastructure a importer.
+- **AWS EC2:** Have an EC2 launched which will serve as infrastructure for us to import.
 
-- **Terraform :** Avoir Terraform installé sur sa machine suivre le lien suivant : https://developer.hashicorp.com/terraform/install .
+- **Terraform:** Have Terraform installed on your machine, follow the following link: https://developer.hashicorp.com/terraform/install.
 
 ## Installation
 
 
-\
 In your command prompt download the repo with the commands:
 ```bash
   git clone https://github.com/AnselmeG300/terraform-import.git
@@ -44,23 +47,23 @@ In your command prompt download the repo with the commands:
 ## Deployment
 
 
-1. Identifiez l'infrastructure à importer ; 
+1. Identify the infrastructure to import; 
 
 ![alt text](<image/1. identification de la ressource à importer dark.png>)
 
-2. Récupérez les configurations l’infrastructure ; 
+2. Retrieve the infrastructure configurations;
 
 ![alt text](<image/2. recuperation des parametres de l'infra dark.png>)
 
-3. Déclarez l'importation ; 
+3. Declare the import;
 
 ![alt text](<image/3. declaration de l'importation dark.png>)
 
-4. Déclarez la ressource (Important : Définir tous les arguments nécessaires, sinon l'infrastructure sera mise à jour lors du apply) correspondante à l'infrastructure à importer dans notre cas EC2 ; 
+4. Declare the resource (Important: Define all the necessary arguments, otherwise the infrastructure will be updated during apply) corresponding to the infrastructure to import in our EC2 case;
 
 ![alt text](<image/4. declaration ressource dark.png>)
 
-5. Taper la commande ```terraform plan``` :  si le plan contient à la fois « import » et « change », vérifiez la définition des arguments ;
+5. Type the command ```terraform plan```: if the plan contains both “import” and “change”, check the definition of the arguments;
 
 ![alt text](<image/5. terraform plan dark.png>)
 ![alt text](<image/5. info plan  dark.png>)
@@ -69,6 +72,8 @@ In your command prompt download the repo with the commands:
 
 ![alt text](<image/6. terraform apply dark.png>) 
 ![alt text](<image/6. info apply dark.png>)
+
+
 ## Authors
 
 - [@AnselmeG300](https://github.com/AnselmeG300/terraform-cloud.git)
