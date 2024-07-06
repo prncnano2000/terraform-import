@@ -1,6 +1,6 @@
 
 
-|| [prerequisites](#prerequisites) ||
+|| [Prerequisites](#prerequisites) ||
 [Deployment](#deployment) ||
 [Authors](#authors) ||
 
